@@ -21,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         //whatever the raycast hits
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
         {
             OnInteractableHit(hit);
         }

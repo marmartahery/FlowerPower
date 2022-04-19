@@ -11,6 +11,15 @@ public class MovementAndAnimation : MonoBehaviour
     //speed of character
     public float speed=6f;
 
+    //for gravity
+    Vector3 velocity;
+    bool isGrounded;
+    public float gravity = -9.8f;
+
+    public Transform groundcheck;
+    public float GroundDistance = 0.4f;
+    public LayerMask groundMask;
+
     Animator animator;
 
     public float turnSmoothTime = 0.1f;
@@ -24,12 +33,23 @@ public class MovementAndAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundcheck.position, GroundDistance, groundMask);
+        if(isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
         //get inputs for WASD
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         //move on the x and z axis
         //normalize is to not increase the speed when 2 keys are pressed
         Vector3 direction= new Vector3(horizontal, 0f, vertical).normalized;
+
+        //for gravityy
+        velocity.y += gravity * Time.deltaTime;
+        Controller.Move(velocity*Time.deltaTime);
+
         //check if we move in any direction
         if(direction.magnitude > 0.1f)
         {
