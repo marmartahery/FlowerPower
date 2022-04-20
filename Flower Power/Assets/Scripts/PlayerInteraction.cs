@@ -59,4 +59,15 @@ public class PlayerInteraction : MonoBehaviour
         land.Select(true);
     }
 
+    //triggers when player clicks interaction key
+    public void Interact()
+    {
+        //checks if player is on interactable land
+        if(HighlightLand != null)
+        {
+            HighlightLand.interact();
+            return;
+        }
+        Debug.Log("Not on interactable land");
+    }
 }

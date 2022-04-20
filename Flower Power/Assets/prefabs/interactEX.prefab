@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6226623546414790910
 Transform:
   m_ObjectHideFlags: 0
@@ -190,4 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6086020a8d9d8ef4785d22ed64836df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoilMat: {fileID: 2100000, guid: 352d923c30ce80f44844c12f61c33eeb, type: 2}
+  farmladMat: {fileID: 2100000, guid: 0f9be7da4c39cb646a557dc7d599838b, type: 2}
+  wateredMat: {fileID: 2100000, guid: 1971ae7ec49435f4db8500b8c1ce494f, type: 2}
+  LandStats: 0
   select: {fileID: 6226623546414790898}
