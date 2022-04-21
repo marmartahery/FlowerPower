@@ -21,7 +21,7 @@ public class PlantGrowth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentProgression);
+        //Debug.Log(currentProgression);
     }
 
     public void Growth()
