@@ -1992,17 +1992,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tools:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b236c0ed75772784284c47c0bf21adef, type: 2}
+  - {fileID: 11400000, guid: 2167b084874e1cf4196c48b9cbf7be95, type: 2}
+  - {fileID: 11400000, guid: 5cc80793d6c83bd4791ec8f08bcb7945, type: 2}
+  - {fileID: 11400000, guid: 032bf3db06b6756429f6adb3c9e49f4e, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   equippedTool: {fileID: 0}
   items:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 43bc4e5a0661c3a4198d5f90efa80282, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2038,6 +2038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4138a99fbf8f9994497e45e73e8feb97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventorypanel: {fileID: 269804613}
   toolSlots:
   - {fileID: 1835122717}
   - {fileID: 903109291}
@@ -2052,6 +2053,7 @@ MonoBehaviour:
   - {fileID: 1469836391}
   - {fileID: 996565340}
   - {fileID: 1863233541}
+  itemNameText: {fileID: 883823365}
 --- !u!1 &160137125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,7 +3149,7 @@ GameObject:
   - component: {fileID: 269504510}
   - component: {fileID: 269504509}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Hand Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7010,21 +7012,21 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 605317231}
+  m_TargetGraphic: {fileID: 2093641031}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 269804613}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 158696872}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ToggleInventoryPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &605317231
 MonoBehaviour:
@@ -17494,7 +17496,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025695095}
-  m_LocalRotation: {x: 0.14738892, y: -0.7465931, z: 0.17624673, w: 0.62434953}
+  m_LocalRotation: {x: 0.14738895, y: -0.7465931, z: 0.1762467, w: 0.6243496}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17992,10 +17994,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 269804613}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 158696872}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ToggleInventoryPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

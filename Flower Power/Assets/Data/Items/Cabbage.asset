@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1581e070ee3d945a662bf0a9b9cb37, type: 3}
   m_Name: Cabbage
   m_EditorClassIdentifier: 
+  Description: green
+  thumbnail: {fileID: 0}
+  gameModel: {fileID: 0}

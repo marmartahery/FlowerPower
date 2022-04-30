@@ -10,5 +10,5 @@ public class ItemData : ScriptableObject
     //icon to display
     public Sprite thumbnail;
 
-    public GameObject gameMode1;
+    public GameObject gameModel;
 }

@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     public void Awake()
     {
         //if there is more than one instance, destroy the extra
-        if(Instance == null && Instance != this)
+        if(Instance != null && Instance != this)
         {
             Destroy(this);
         }
