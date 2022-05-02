@@ -6,11 +6,21 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
+    [Header("Status Bar")]
+    //shows the status of what item is selected
+    public Image toolEquipSlot;
+
+
+
     [Header("Inventory System")]
     //the inventory panel
     public GameObject inventorypanel;
+    //The Tool equip slot UI of the inventory panel
+    public HandInventorySlot toolHandSlot;
     //the tool slots UI
     public InventorySlot[] toolSlots;
+    //The item equip slot UI of the inventory panel
+    public HandInventorySlot itemHandSlot;
     //the item slot UI
     public InventorySlot[] itemSlots;
     //Item info box
@@ -33,7 +43,19 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         RenderInventory();
+        AssignSlotIndexes();
     }
+
+    //iterate thorugh the slot UI elements and assign it its reference
+    public void AssignSlotIndexes()
+    {
+        for(int i=0;i<toolSlots.Length; i++)
+        {
+            toolSlots[i].AssignIndex(i);
+            itemSlots[i].AssignIndex(i); 
+        }
+    }
+
     //render the inventory screen to reflect the player's inventory.
     public void RenderInventory()
     {
@@ -45,6 +67,25 @@ public class UIManager : MonoBehaviour
         renderInventoryPanel(inventorytoolSlots, toolSlots);
         //render the item section
         renderInventoryPanel(inventoryitemSlots, itemSlots);
+
+        //render equipped tool
+        toolHandSlot.Display(InventoryManager.Instance.equippedTool);
+        itemHandSlot.Display(InventoryManager.Instance.equippedItem);
+
+
+        //Get Tool Equiped from InventoryManager
+        ItemData equipped = InventoryManager.Instance.equippedTool;
+        //Check if there is an item to display
+        if (equipped != null)
+        {
+            //switch the thumbnail over
+            toolEquipSlot.sprite = equipped.thumbnail;
+
+            toolEquipSlot.gameObject.SetActive(true);
+            return;
+        }
+        toolEquipSlot.gameObject.SetActive(false);
+
     }
     //iterate through a slot in a section and display them in the UI
     void renderInventoryPanel(ItemData[] slots, InventorySlot[] uiSlots)
