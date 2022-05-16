@@ -30,6 +30,9 @@ public class InventoryManager : MonoBehaviour
     //Item in the player's hand
     public ItemData equippedItem = null;
 
+    public Transform handPoint;
+
+
     //Equip
 
     //Handles movement of the item from inventory to Hand
@@ -43,6 +46,7 @@ public class InventoryManager : MonoBehaviour
             items[slotIndex] = equippedItem;
             //change the hand slot to the inventory slot
             equippedItem = itemToEquip;
+
         }
         else
         {
@@ -76,6 +80,7 @@ public class InventoryManager : MonoBehaviour
                 
             }
 
+    
         }
         else
         {
@@ -98,6 +103,7 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    // Equipped item renderer
 
     // Start is called before the first frame update
     void Start()

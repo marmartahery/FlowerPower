@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6226623547632229601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.8, y: 0.7, z: 2.7856984}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6226623546414790910}
@@ -195,3 +195,4 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 1971ae7ec49435f4db8500b8c1ce494f, type: 2}
   LandStats: 0
   select: {fileID: 6226623546414790898}
+  cropPrefab: {fileID: 3828291638362268314, guid: 60bbd68880131584e81fd7e053e0035c, type: 3}

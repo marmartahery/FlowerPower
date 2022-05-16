@@ -54,6 +54,11 @@ public class MovementAndAnimation : MonoBehaviour
             playerinteraction.Interact();
         }
         //TODO set up item interaction
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            playerinteraction.ItemInteract();
+        }
     }
 
     public void CheckOnGround()
