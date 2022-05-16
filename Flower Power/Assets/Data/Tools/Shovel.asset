@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c68ccd86b5784b429562d5faf53f82d, type: 3}
   m_Name: Shovel
   m_EditorClassIdentifier: 
-  Description: 
+  Description: Clear plant material
   thumbnail: {fileID: 2495920266222500625, guid: 14fd92ee44de2e34d927f7ce31aae937, type: 3}
   gameModel: {fileID: 0}
   toolType: 4

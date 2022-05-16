@@ -6,8 +6,14 @@ public class PlayerInteraction : MonoBehaviour
 {
     MovementAndAnimation playercontroller;
 
+    
     //highlight over the land that is selecting
     Land HighlightLand = null;
+
+    InteractableObject selectedObject = null; 
+
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +40,25 @@ public class PlayerInteraction : MonoBehaviour
         //checks if the player is able to interact with the land
         if (other.tag == "InteractableLand")
         {
-            Debug.Log("im on interactable");
+            //Debug.Log("im on interactable");
             Land land = other.GetComponent<Land>();
             SelectLand(land);
             return;
         }
+        
+        if(other.tag == "Item")
+        {
+            selectedObject = other.GetComponent<InteractableObject>();
+            return;
+        }
+
+        // Deselecting interactable object 
+        if(selectedObject != null)
+        {
+            selectedObject = null;
+        }
+
+
         //unselect the land if the player is not on it
         if(HighlightLand != null)
         {
@@ -62,6 +82,11 @@ public class PlayerInteraction : MonoBehaviour
     //triggers when player clicks interaction key
     public void Interact()
     {
+        // DONT let user use tools if item/seed/plant is equipped
+        if(InventoryManager.Instance.equippedItem != null)
+        {
+            return;
+        }
         //checks if player is on interactable land
         if(HighlightLand != null)
         {
@@ -69,5 +94,24 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
         Debug.Log("Not on interactable land");
+
+       
     }
+
+    public void ItemInteract()
+    {
+        if(InventoryManager.Instance.equippedItem != null)
+        {
+            InventoryManager.Instance.HandToInventory(InventorySlot.InventoryType.Item);
+            return; 
+        }
+
+        if (selectedObject != null)
+        {
+            // pick crop up
+            selectedObject.Pickup();
+        }
+    }
+
+
 }

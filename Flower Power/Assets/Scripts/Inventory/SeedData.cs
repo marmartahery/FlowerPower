@@ -10,4 +10,7 @@ public class SeedData : ItemData
 
     //the crop the seed will yeild
     public ItemData cropToYield;
+
+    public GameObject seedling;
+
 }
