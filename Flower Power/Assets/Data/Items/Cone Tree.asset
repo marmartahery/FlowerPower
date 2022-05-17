@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c1581e070ee3d945a662bf0a9b9cb37, type: 3}
-  m_Name: Cabbage
+  m_Name: Cone Tree
   m_EditorClassIdentifier: 
-  Description: green
+  Description: 
   thumbnail: {fileID: 0}
-  gameModel: {fileID: 8554979865545778643, guid: aec8969d0290c6d4cbc587ef85a01ce4, type: 3}
+  gameModel: {fileID: 0}
