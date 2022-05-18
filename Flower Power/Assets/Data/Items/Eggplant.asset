@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c1581e070ee3d945a662bf0a9b9cb37, type: 3}
-  m_Name: Cabbage
+  m_Name: Eggplant
   m_EditorClassIdentifier: 
-  Description: Cabbage
-  thumbnail: {fileID: 21300000, guid: 9985d4caebf50be4ea689fc1544ebd44, type: 3}
-  gameModel: {fileID: 8554979865545778643, guid: aec8969d0290c6d4cbc587ef85a01ce4, type: 3}
+  Description: Eggplant
+  thumbnail: {fileID: 21300000, guid: 6f299d09b3b8a3a4b99fc7f0a6f50267, type: 3}
+  gameModel: {fileID: 1000011817031034, guid: 92417dd2b68fd6147a711fb2af4275b1, type: 3}
