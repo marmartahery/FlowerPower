@@ -12,8 +12,8 @@ public class CropBehavior : MonoBehaviour
     private GameObject seedling;
     private GameObject harvestable;
 
-    int growth;
-    //int growth = 2300;
+    //int growth;
+    int growth = 2300;
     // as of rn our max growth is 3 for every plant
     int maxGrowth;
 
